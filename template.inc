@@ -27,22 +27,20 @@ public static function printHeader(){
     
 <?php
 
-template::setRelAsset('css', 'http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css');  
-template::setRelAsset('js', 'http://code.jquery.com/jquery-1.9.1.min.js');  
-template::setRelAsset('js', 'http://code.jquery.com/ui/1.10.2/jquery-ui.min.js');
+template_assets::setRelAsset('css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.min.css');  
+template_assets::setRelAsset('js', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');  
+template_assets::setRelAsset('js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js');
 
-echo template::getRelAssets();
-echo template::getJsHead();
-echo template::getMeta();
+echo template_assets::getRelAssets();
+echo template_assets::getJsHead();
+echo template_meta::getMeta();
 
 template::setTemplateCss('1kbgrid', null, 10);
-
 template::setCss('/templates/1kbgrid/grid.css');
-echo template::getFaviconHTML();
 
-
-echo template::getCompressedCss();
-echo template::getInlineCss();
+echo template_favicon::getFaviconHTML();
+echo template_assets::getCompressedCss();
+echo template_assets::getInlineCss();
 
 
 
@@ -144,8 +142,9 @@ public static function printFooter(){ ?>
 
 
 
-    echo template::getInlineJs();
-echo template::getJs();
+echo template::getEndHTML();
+echo template_assets::getCompressedJs();
+echo template_assets::getInlineJs();
 ?>
 </body>
 </html>
