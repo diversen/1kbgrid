@@ -21,6 +21,10 @@ public static function printHeader(){
 <html lang="<?=config::$vars['coscms_main']['lang']?>">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
 <title><?php echo template::getTitle(); ?></title>
 
 
@@ -35,8 +39,9 @@ echo template_assets::getRelAssets();
 echo template_assets::getJsHead();
 echo template_meta::getMeta();
 
-template::setTemplateCss('1kbgrid', null, 10);
-template::setCss('/templates/1kbgrid/grid.css');
+template_assets::setTemplateCss('1kbgrid', null, 10);
+template_assets::setCss('/templates/1kbgrid/grid.css');
+template_assets::setCss('/templates/1kbgrid/devices.css');
 
 echo template_favicon::getFaviconHTML();
 echo template_assets::getCompressedCss();

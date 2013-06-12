@@ -1,0 +1,29 @@
+
+@media (min-width: 481px) and (max-width: 768px) {
+   #sidebar_left { display: none}
+   #page { 
+       width: 481px
+   }
+   #content { 
+       font-size: 1.4em;
+       margin-left: 2px; 
+       width: 470px
+   }
+   #header { 
+       margin-left: 2px
+   }
+
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+   #sidebar_left { display: none}
+   #page { 
+       width: 320px
+   }
+   #content { 
+       font-size: 1.6em;
+       margin-left: 0px;
+       width: 305px
+   }
+   #header { margin-left: 0px}
+}
