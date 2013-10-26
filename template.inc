@@ -154,12 +154,12 @@ echo template_assets::getInlineJs();
 </body>
 </html>
 
-<? 
+<?php 
 
     // end function
 
     }
     
 // end class
-}
+} ?>
 
